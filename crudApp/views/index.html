@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>crud app</title>
+</head>
+<body>
+    
+    <!--Header-->
+    <header id="header"> 
+        <nav>
+            <div class="container">
+                <div class="text-center">
+                    <a href="/" class="nav-brand text-dark">user managment system</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--/Header-->
+
+     <!--Main site-->
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav">
+                <a href="/add-user">
+                    <span>New user <i class="fa-regular fa-user"></i></span>
+                </a>
+            </div>
+
+        <!--form handling--> 
+        <form action="/" method="POST">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Gender</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                     <tr>
+                        <td>1</td>
+                        <td>kylie</td>
+                        <td>kylie@gmail.com</td>
+                        <td>female</td>
+                        <td>active</td>
+                        <td>vvvv</td>
+                        <td>
+                            <a href=""><i class="fas fa-pencil-alt"></i></a>
+                        </td>
+                        <td>
+                            <a href=""><i class="fas fa-times"></i></a>
+                        </td>
+                       
+                     </tr>
+                </tbody>
+            </table>
+        </form>
+        <!--form handling--> 
+        </div>
+    </main>
+     <!--/Main-->
+
+    </body>
+    </html>
