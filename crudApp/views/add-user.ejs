@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <title>crud app</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Create User</title>
 </head>
 <body>
 
@@ -21,7 +21,7 @@
     </header>
     
     
-    <div class="back">       </span><a  href="/"> << users</a>
+    <div class="back"> </span><a  href="/"> <i class="fas fa-angle-double-left"></i> users</a>
     </div>
     <div class="form-container">
         <div class="title">new user </div>
@@ -35,16 +35,17 @@
                  
                 <input type="email" placeholder="example@gmail.com">
              <br>
-            <label for="">
-                gender :
-                <input type="radio" name="gender" value="male" id=""> male
-                <input type="radio" name="gender" value="female" id=""> female
+                  <!--gender-->
+            <label class="radio" for="">
+                <span>Gender</span>
+                <span><input type="radio" name="gender" value="male" id=""> male</span>
+                <span><input type="radio" name="gender" value="female" id=""> female</span>
 
             </label> <br>
-            <label for="">
-                status :
-                <input type="radio" name="status" value="active" id=""> active
-                <input type="radio" name="status" value="inactive" id=""> inactive
+             <!--status-->
+            <label class="radio" for=""> <span>status </span>
+                <span><input type="radio" name="status" value="active" id=""> active</span>
+                <span><input type="radio" name="status" value="inactive" id=""> inactive </span>
 
             </label> <br>
             <button class="submit" type="submit">Submit <i class="fa-solid fa-arrow-right"></i></button>

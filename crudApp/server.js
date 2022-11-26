@@ -29,4 +29,11 @@ app.get('/' , (req ,res)=>{
     res.render("index")
 } )
 
+app.get('/add-user' , (req, res)=>{
+    res.render("add-user")
+})
+app.get('/update' , (req, res)=>{
+    res.render("update")
+})
+
 app.listen(PORT , ()=>{console.log(`listening on ${PORT}`);} )

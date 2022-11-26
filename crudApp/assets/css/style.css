@@ -2,7 +2,7 @@
 
 :root{
     --dark : #1e293b ;
-    --light : #f1f5f9 ; 
+    --light : #f1f5f9aa ; 
     --border : #e2e8f0 ;
     --border-btn : #94a3b8;
 }
@@ -80,4 +80,83 @@ table td > a:nth-child(2){
 tbody tr:hover{
     background: var(--light);
     cursor: pointer;
+}
+
+
+/********FORMS**********/
+.back{
+    margin: 2rem;
+    width: 44%;
+
+}
+.back >a{
+    color: #1e293b;
+    font-size: 1.1em;
+}
+
+.form-container .title{
+    margin-bottom: 0.3em;
+    text-align: center;
+    font-size: 1.5em;
+    text-transform: capitalize;
+    color: var(--dark);
+}
+.label{
+    opacity: 0.6;
+    margin-bottom: 1.5em;
+    text-align: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+input{
+    margin: 0.5em 0;
+}
+
+input[type="text"],input[type="email"]{
+    border: 2px solid #c6d0dec1;
+    outline: 0;
+    width: 600px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    color: var(--dark);
+}
+label{
+    padding: 0 5px;
+    color: #1e293b;
+    font-size: 1.1em;
+    text-transform: capitalize;
+}
+
+input[type="radio"]{
+ font-size: 1.1em;
+ accent-color : rgb(122, 122, 122);
+ height: 17px;
+ width: 17px;
+ margin-right: 5px;
+ 
+}
+.radio{
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr;
+    gap: 20px;
+    align-items: center;
+}
+
+
+.submit{
+    margin: 1em 0;
+    color: #fff;
+    background:#10b981;
+    font-size: 1.3em;
+    text-align: center;
+    padding: 10px 5px;
+    border-radius: 7px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
