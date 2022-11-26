@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+:root{
+    --dark : #1e293b ;
+    --light : #f1f5f9 ; 
+    --border : #e2e8f0 ;
+    --border-btn : #94a3b8;
+}
+body { 
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inter;
+}
+a{
+    text-decoration: none;
+}
+#header nav{
+    background: rgb(134,239,172);
+    background: linear-gradient(90deg, rgba(134,239,172,1) 0%, rgba(20,184,166,1) 100%);     padding: 1em 0;
+    width: 100vw;
+    text-align: center;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    
+}
+.text-dark{
+    color: #fff;
+    font-size: 1.3em;
+    letter-spacing: 2px;
+}
+#site-main{
+    margin-top: 6rem;
+    
+}
+#site-main .container .box-nav >a{ 
+    font-size: 1em;
+    padding: .5em 1em;
+    color: var(--dark);
+    border: 1px solid var(--border-btn) ;
+    border-radius: 5px;
+    text-transform: capitalize;
+
+
+}
+
+#site-main form{
+    margin: 2rem 0;
+}
+table{
+    border-spacing: 0px;
+    width: 100%;
+}
+table td  , table th{
+    padding: 1.3em 2em;
+    vertical-align: top;
+    text-align: center;
+
+}
+table td{
+    border-bottom: 2px solid var(--border);
+
+}
+table td > a{
+    font-size: 1.1em;
+    padding: 0 .5em;
+}
+table td > a:first-child{
+    color: #fde047;
+}
+table td > a:nth-child(2){
+    color: red;
+}
+tbody tr:hover{
+    background: var(--light);
+    cursor: pointer;
+}
