@@ -1,12 +1,13 @@
-<tbody >
+<% for(let i = 0 ; i<users.length ; i ++){ %> 
+
     
 
     <tr>
-       <td>1</td>
-       <td>kylie</td>
-       <td>kylie@gmail.com</td>
-       <td>female</td>
-       <td>active</td>
+       <td> <%= i + 1 %>  </td>
+       <td> <%= users[i].name %>  </td>
+       <td><%= users[i].email %></td>
+       <td><%= users[i].gender %></td>
+       <td><%= users[i].status %></td>
        <td>
            <a href="/update"><i class="fas fa-pencil-alt"></i></a>
        
@@ -14,4 +15,4 @@
        </td>
       
     </tr>
-</tbody>
+<% } %> 
