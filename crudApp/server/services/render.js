@@ -14,7 +14,8 @@ exports.homeRoutes =  (req ,res)=>{
 
 exports.add_user =  (req, res)=>{
     //make post request to the api/users
-    res.render("add-user")
+     res.render("add-user")
+     
 }
 
 exports.update = (req, res)=>{
