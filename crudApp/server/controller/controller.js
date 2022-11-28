@@ -32,9 +32,25 @@ exports.create =  (req,res)=>{
 }
 //retrive & return all / single user(s)
 exports.find =  (req,res)=>{
-    Userdb.find()
-    .then(user=>res.send(user))
-    .catch(err=>{res.status(500).send({msg2 : err.message || "error while getting data  "})})
+    
+    if(req.query.id){
+        const id = req.query.id 
+        Userdb.findById(id)
+        .then(data=>{
+            if(!data){
+                res.status(404).send({msg : "user not found"})
+            }else{
+                res.send(data)
+            }
+        })
+        .catch(err=>res.status(500).send({msg : "error retriving user"}))
+    }
+    else{
+
+        Userdb.find()
+        .then(user=>res.send(user))
+        .catch(err=>{res.status(500).send({msg2 : err.message || "error while getting data  "})})
+    }
 }
 
 //update
