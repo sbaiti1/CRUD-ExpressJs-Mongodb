@@ -26,26 +26,27 @@
     <div class="form-container">
         <div class="title">Update user </div>
         <div class="label">use the below form to edit user informations</div>
-        <form action="">
+        <form action="" method="POST" id="update_form">
+            <input type="hidden" name="id" value="<%= user._id %> ">
             <label for="">name</label>
                  
-                <input type="text" name="name" placeholder="kylie smith">
+                <input type="text" value="<%= user.name %> " name="name" placeholder="kylie smith">
              <br>
             <label for="">email</label>
                  
-                <input type="email" placeholder="example@gmail.com">
+                <input type="email" value="<%= user.email    %> " name="email"  placeholder="example@gmail.com">
              <br>
               <!--gender-->
             <label class="radio" for="">
                 <span>Gender</span>
-                <span><input type="radio" name="gender" value="male" id=""> male</span>
-                <span><input type="radio" name="gender" value="female" id=""> female</span>
+                <span><input type="radio" name="gender" <%= user.gender == "male" && 'checked' %>  value="male" id=""> male</span>
+                <span><input type="radio" name="gender" <%= user.gender == "female" && 'checked' %>  value="female" id=""> female</span>
 
             </label> <br>
              <!--status-->
             <label class="radio" for=""> <span>status </span>
-                <span><input type="radio" name="status" value="active" id=""> active</span>
-                <span><input type="radio" name="status" value="inactive" id=""> inactive </span>
+                <span><input type="radio" name="status" <%= user.status == "active" && 'checked' %>    value="active" id=""> active</span>
+                <span><input type="radio" name="status" <%= user.status == "inactive" && 'checked' %>    value="inactive" id=""> inactive </span>
 
             </label> <br>
             <button class="submit" type="submit">Update <i class="fa-solid fa-check"></i></button>
@@ -54,5 +55,7 @@
 
      
 
-    </body>
-    </html>
+ <!--include footer-->
+
+<%- include('include/_footer') %> 
+<!--/include footer-->

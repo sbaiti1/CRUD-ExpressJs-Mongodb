@@ -58,20 +58,25 @@ exports.find =  (req,res)=>{
 //update
 exports.update =  (req,res)=>{
     if(!req.body){
+        
         return res
         .status(400)
         .send({message : "data to update can not be empty" })
         
     }
-
+    
     const id = req.params.id ;
+    console.log(" again updatiiiing....");
+    console.log(`here's the body : ${JSON.stringify(req.body)}`);
     Userdb.findByIdAndUpdate(id , req.body)
     .then(data =>
         {
             if(!data){
+                console.log("data is empty");
                 res.status(400).send({msg : `cannot update user ${id}` })
             }else{
                 res.send(data)
+                console.log("data sent" + data);
             }
         })
     .catch(err=>{
