@@ -22,6 +22,29 @@ $.ajax(request).done(function(response){
 console.log("done");
 
 })
+console.log(window.location.pathname);
+if(window.location.pathname == '/'){
+  console.log('route');
+  $ondelete = $('.delete_btn')
+  $ondelete.click(function(){
+    var id = $(this).attr("data-id")
+    console.log("id is "  + id);
+
+  var request = {
+  'url' : `http://localhost:3000/api/users/${id}` , 
+  'method' : "DELETE" ,
+  
+  }
+
+  if(confirm("Do you really want to delete this record?")){
+    $.ajax(request).done(function(response){
+      alert('user deleted successfully')
+      location.reload()
+  })
+  }
+
+  })
+}
 /*const update_form = document.getElementById("update_form")
 update_form.addEventListener('submit' , (e)=>{
     e.preventDefault() ;
