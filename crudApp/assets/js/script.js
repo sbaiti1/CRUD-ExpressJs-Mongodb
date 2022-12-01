@@ -27,6 +27,7 @@ if(window.location.pathname == '/'){
   console.log('route');
   $ondelete = $('.delete_btn')
   $ondelete.click(function(){
+    console.log("hello");
     var id = $(this).attr("data-id")
     console.log("id is "  + id);
 
