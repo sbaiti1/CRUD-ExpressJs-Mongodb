@@ -1,13 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dash.css">
+    <title>crud app</title>
+</head>
+<body>
 
 
-<!--include header-->
+    <div class="side-nav">
+        <ul>
+            <li class="logo"> <img src="img/bluelogo_1_-removebg-preview(1).png " alt=""> <div>Docklin</div></li>
+            <li class="menu active"><i class="fa-solid fa-chart-pie"></i><a href="">overview</a></li>
+            <li class="menu"><i class="fa-solid fa-heart-pulse"></i><a href="">traitements</a></li>
+            <li class="menu"><i class="fa-solid fa-sliders"></i><a href="">settings</a></li>
+           
+            <li class="line"></li>
+            <li><i class="fa-solid fa-arrow-right-from-bracket"></i><a href="">logout</a></li>
+        </ul>
+    </div>
 
-<%- include('include/_header') %> 
-<!--/include header-->
 
-
-     <!--Main site-->
-     <main id="site-main">
+   <div class="container">
+    <div class="top-nav">
+        <div id="date">
+            <i class="fa-regular fa-calendar"></i> <span>Mon,31 Jan 2023</span>
+        </div>
+        <div class="theme">
+            <i class="fa-regular fa-moon"></i>
+        </div>
+        <div class="not">
+            <i class="fa-regular fa-bell"></i>
+        </div>
+        <div class="profile">    
+                <div class="name">salim ali</div>
+                <div class="img"></div>   
+        </div>
+        
+    </div> 
+    <!--TABLE / USERS-->
+    <main id="site-main">
         <div class="container">
             <div class="box-nav">
                 <a href="/add-user">
@@ -38,7 +74,10 @@
     </main>
      <!--/Main-->
 
-<!--include footer-->
+    
+   </div>
 
-<%- include('include/_footer') %> 
-<!--/include footer-->
+     
+
+    </body>
+    </html>

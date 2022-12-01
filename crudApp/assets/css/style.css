@@ -6,11 +6,12 @@
     --border : #e2e8f0 ;
     --border-btn : #94a3b8;
 }
-body { 
+/* body { 
 	display: flex;
     flex-direction: column;
     align-items: center;
-}
+} */
+
 
 *{
     margin: 0;
@@ -21,7 +22,7 @@ body {
 a{
     text-decoration: none;
 }
-#header nav{
+/* #header nav{
     background: rgb(134,239,172);
     background: linear-gradient(90deg, rgba(134,239,172,1) 0%, rgba(20,184,166,1) 100%);     padding: 1em 0;
     width: 100vw;
@@ -29,7 +30,7 @@ a{
     font-size: 1.2rem;
     text-transform: capitalize;
     
-}
+} */
 .text-dark{
     color: #fff;
     font-size: 1.3em;
@@ -37,6 +38,7 @@ a{
 }
 #site-main{
     margin-top: 6rem;
+    width: 900px;
     
 }
 #site-main .container .box-nav >a{ 
@@ -51,11 +53,12 @@ a{
 }
 
 #site-main form{
-    margin: 2rem 0;
+    margin: 3rem 0;
 }
 table{
     border-spacing: 0px;
-    width: 100%;
+    width: 800px;
+    
 }
 table td  , table th{
     padding: 1.3em 2em;
