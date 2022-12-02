@@ -22,6 +22,8 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background: #f7f8fcd2;
+
 }
 /********FORMS**********/
 .back{

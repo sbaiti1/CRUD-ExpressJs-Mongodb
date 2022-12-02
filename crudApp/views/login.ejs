@@ -12,7 +12,7 @@
     
     <div class="container">
         <div class="logo">
-            <img src="../assets/img/bluelogo_1_-removebg-preview(1).png" alt="">
+            <img src="img/bluelogo_1_-removebg-preview(1).png" alt="">
         </div>
         <div class="brand">DOCKLIN</div>
         <div class="text">log in to admin dashboard </div>
@@ -32,10 +32,19 @@
             <input type="password" placeholder="password">
            </div>
            <!--button-->
-           <button type="submit">log in</button>
+           <button id="login" type="button" onclick="pageRedirect()">log in</button>
 
         </form>
     </div>
 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <script src="js/login.js"></script>ù -->
+    <script>
+            
+        function pageRedirect(){
+            window.location.href = "http://localhost:3000/home"
+        }
+    </script>
 </body>
 </html>

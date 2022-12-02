@@ -27,3 +27,7 @@ exports.update = (req, res)=>{
         res.send(err)
     })
 }
+
+exports.login = (req , res)=>{
+    res.render("login")
+}

@@ -8,11 +8,12 @@ const controller = require('../controller/controller')
 *@description root Route
 *@method GET /
 */
-route.get('/' , services.homeRoutes )
+route.get('/' , services.login )
 
 route.get('/add-user' , services.add_user)
 
 route.get('/update' , services.update )
+route.get('/home' , services.homeRoutes )
 
 //API
 route.post("/api/users" , controller.create)

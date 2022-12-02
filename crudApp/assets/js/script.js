@@ -23,7 +23,7 @@ console.log("done");
 
 })
 console.log(window.location.pathname);
-if(window.location.pathname == '/'){
+if(window.location.pathname == '/home'){
   console.log('route');
   $ondelete = $('.delete_btn')
   $ondelete.click(function(){
