@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inter;
+}
+a{
+    text-decoration: none;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #f7f8fcd2;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    height: 85vh;
+    gap: 10px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+
+.logo img{
+    margin: 0 auto;
+    margin-top: 2rem;
+    height: 50px;
+}
+.brand{
+    color: #A4A6B3;
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.msg{
+    color: #9FA2B4;
+    font-size: 15px;
+    margin-bottom: .3rem;
+}
+.text{
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    color: #252733;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+.row{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+}
+label{
+    color: #9FA2B4;
+    padding: 10px 2px;
+    text-transform: capitalize;
+}
+input{
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 13px 14px;
+    font-size: 16px;
+}
+
+button{
+    cursor: pointer;
+    margin: .5rem 0;
+    font-size: 17px;
+    text-transform: capitalize;
+    color: #fff;
+    padding: 10px 0;
+    background: #3751FF;
+    border: 1px solid #3751FF;
+    outline: 0;
+    width: 100%;
+/* button / accent default */
+box-shadow: 0px 4px 12px rgba(55, 81, 255, 0.24);
+border-radius: 8px;
+}
