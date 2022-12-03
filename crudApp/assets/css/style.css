@@ -37,6 +37,7 @@ a{
     letter-spacing: 2px;
 }
 #site-main{
+    margin-left: -4rem;
     margin-top: 6rem;
     width: 900px;
     
@@ -57,7 +58,7 @@ a{
 }
 table{
     border-spacing: 0px;
-    width: 800px;
+    width: 900px;
     
 }
 table td  , table th{

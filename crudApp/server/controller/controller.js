@@ -16,7 +16,7 @@ exports.create =  (req,res)=>{
         email : req.body.email , 
         gender : req.body.gender , 
         status : req.body.status ,
-        traitements : [ [{price : req.body.price} , {docName : req.body.docName} ,{time : {date : date , hour : hour   } }] ]
+        traitements : [ [{price : req.body.price} , {docName : req.body.docName} , {date : date , hour : hour   }] ]
 
     })
 

@@ -28,7 +28,13 @@ exports.update = (req, res)=>{
     })
 }
 exports.traitements = (req , res)=>{
-    res.render("traitements")
+    axios.get("http://localhost:3000/api/users")
+    .then(function(response){
+        res.render("traitements" , {users : response.data} )
+    })
+    .catch(err=>{
+        res.send(err)
+    })
 }
 exports.login = (req , res)=>{
     res.render("login")
