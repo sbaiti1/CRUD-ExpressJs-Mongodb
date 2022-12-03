@@ -14,6 +14,7 @@ route.get('/add-user' , services.add_user)
 
 route.get('/update' , services.update )
 route.get('/home' , services.homeRoutes )
+route.get('/traitements' , services.traitements)
 
 //API
 route.post("/api/users" , controller.create)

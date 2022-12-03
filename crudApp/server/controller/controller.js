@@ -1,5 +1,7 @@
 var Userdb = require('../model/model')
-
+let d = new Date(Date.now()) ;
+let date = d.toLocaleDateString() ; 
+let hour = `${d.getHours()} : ${d.getMinutes()}`
 //create a new user
 exports.create =  (req,res)=>{
     //validing request
@@ -13,7 +15,8 @@ exports.create =  (req,res)=>{
         name : req.body.name , 
         email : req.body.email , 
         gender : req.body.gender , 
-        status : req.body.status 
+        status : req.body.status ,
+        traitements : [ [{price : req.body.price} , {docName : req.body.docName} ,{time : {date : date , hour : hour   } }] ]
 
     })
 

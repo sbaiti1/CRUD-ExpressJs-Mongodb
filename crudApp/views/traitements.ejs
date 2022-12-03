@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/dash.css">
+    <link rel="stylesheet" href="css/cards.css">
     <title>crud app</title>
 </head>
 <body>
@@ -15,8 +15,8 @@
     <div class="side-nav">
         <ul>
             <li class="logo"> <img src="img/bluelogo_1_-removebg-preview(1).png " alt=""> <div>Docklin</div></li>
-            <li class="menu active"><i class="fa-solid fa-chart-pie"></i><a href="">overview</a></li>
-            <li class="menu"><i class="fa-solid fa-heart-pulse"></i><a href="/traitements">traitements</a></li>
+            <li class="menu active"><i class="fa-solid fa-chart-pie"></i><a href="/home">overview</a></li>
+            <li class="menu"><i class="fa-solid fa-heart-pulse"></i><a href="">traitements</a></li>
             <li class="menu"><i class="fa-solid fa-sliders"></i><a href="">settings</a></li>
            
             <li class="line"></li>
@@ -42,43 +42,24 @@
         </div>
         
     </div> 
-    <!--TABLE / USERS-->
-    <main id="site-main">
-        <div class="container">
-            <div class="box-nav">
-                <a href="/add-user">
-                    <span>New user <i class="fa-regular fa-user"></i></span>
-                </a>
+    <!--end of top nav-->
+
+    <!--show traitements-->
+        <div class="cards">
+            <div class="title">Recent traitements</div>
+            <div class="cards-container">
+                <%- include('include/card') %> 
+                <%- include('include/card') %> 
+                <%- include('include/card') %> 
+
+                <%- include('include/card') %> 
+                <%- include('include/card') %> 
+                <%- include('include/card') %> 
+                
             </div>
-
-        <!--form handling--> 
-        <form action="/" method="POST">
-            <table>
-                <thead >
-                    <tr>
-                        <th>ID</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Gender</th>
-                        <th>Status</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody >
-                <%- include('include/_show') %> 
-                </tbody>
-            </table>
-        </form>
-        <!--form handling--> 
         </div>
-    </main>
-     <!--/Main-->
 
-    
-   </div>
 
-     
+    </div>
     </body>
     </html>
-
-    <%- include('include/_footer.ejs') %>
