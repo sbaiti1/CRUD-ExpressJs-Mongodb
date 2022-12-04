@@ -17,11 +17,11 @@
         <div class="brand">DOCKLIN</div>
         <div class="text">log in to admin dashboard </div>
         <div class="msg">enter your email and password bellow</div>
-        <form action="">
+        <form action="" id="login-form">
             <!--email-->
            <div class="row">
             <label for="">email</label>
-            <input type="email" placeholder="email adress">
+            <input type="email" id="email" name="email" placeholder="email adress" value="">
            </div>
            <!--password-->
            <div class="row">
@@ -29,10 +29,10 @@
                 <span>password</span>
                 <!-- <span><a href="">Forget password</a></span> -->
             </label>
-            <input type="password" placeholder="password">
+            <input type="password" id="pwd" name="pwd" placeholder="password" value="">
            </div>
            <!--button-->
-           <button id="login" type="button" onclick="pageRedirect()">log in</button>
+           <button id="login" type="submit" >log in</button>
 
         </form>
     </div>
@@ -45,6 +45,21 @@
         function pageRedirect(){
             window.location.href = "http://localhost:3000/home"
         }
+        const btn = document.getElementById('login')
+        const form = document.getElementById('login-form')
+        const data = new FormData(form)
+        btn.addEventListener('click' , (e)=>{
+            const email = document.getElementById('email').value
+            const pwd = document.getElementById('pwd').value
+            if(email === 'admin@gmail.com' && pwd === 'admin' ){
+                e.preventDefault()
+                pageRedirect()
+            }else{
+                e.preventDefault()
+                console.log("pwd or email not valid");
+            }
+        })
+
     </script>
 </body>
 </html>
