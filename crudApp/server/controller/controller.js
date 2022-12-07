@@ -1,4 +1,6 @@
 var Userdb = require('../model/model')
+const jwt = require('jsonwebtoken');
+const { default: axios } = require('axios');
 let d = new Date(Date.now()) ;
 let date = d.toLocaleDateString() ; 
 let hour = `${d.getHours()} : ${d.getMinutes()}`
@@ -103,4 +105,16 @@ exports.delete =  (req,res)=>{
         res.status(500).send({msg : "error delete user"})
     })
 
+}
+exports.login = (req,res)=>{
+    const {email , pwd} = req.body
+    if(email === 'admin@gmail.com' && pwd === 'admin'){
+        const user = {email : email}
+        req.session.user = user;
+        req.session.save();
+        return res.redirect('/home')
+       
+    }else{
+        res.send('email or pwd not valid')
+    }
 }

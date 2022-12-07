@@ -4,6 +4,8 @@ const morgan = require('morgan')
 const bodyparser = require("body-parser")
 const path = require('path')
 const app = express();
+const session = require("express-session");
+const cookieParser = require("cookie-parser");
 const connectDB = require('./server/database/connection')
 dotenv.config({path : "config.env"})
 
@@ -17,6 +19,14 @@ connectDB();
 
 //parse request to body parser
 app.use(bodyparser.urlencoded({extended : true}))
+// Initialization
+app.use(cookieParser());
+
+app.use(session({
+    secret: "amar",
+    saveUninitialized: true,
+    resave: true
+}));
 //set view engine
 app.set("view engine" , "ejs")
 //app.set("views" , path.resolve(__dirname , "view/ejs"))

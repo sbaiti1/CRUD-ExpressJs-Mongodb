@@ -1,16 +1,26 @@
 const axios = require('axios')
+const { json } = require('body-parser')
+const jwt = require('jsonwebtoken');
+
 
 
 exports.homeRoutes =  (req ,res)=>{
     //make get request to the api/users
-    axios.get("http://localhost:3000/api/users")
-    .then(function(response){
-        res.render("index" , {users : response.data} )
-    })
-    .catch(err=>{
-        res.send(err)
-    })
+    if(req.session.user){
+        axios.get("http://localhost:3000/api/users")
+        .then(function(response){
+            res.render("index" , {users : response.data} )
+        })
+        .catch(err=>{
+            res.send(err)
+        })
+    }else{
+        res.redirect('/')
+    }
 }
+    
+    
+
 
 exports.add_user =  (req, res)=>{
     //make post request to the api/users
@@ -37,5 +47,6 @@ exports.traitements = (req , res)=>{
     })
 }
 exports.login = (req , res)=>{
+   
     res.render("login")
 }
