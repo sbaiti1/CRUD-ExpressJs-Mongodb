@@ -1,5 +1,5 @@
 <% for (let i =0 ; i<users.length ; i++){ %> 
-
+<% if(users[i].traitements[0][1].docName && users[i].traitements[0][1].docName != null){ %> 
 <div class="card">
     <div class="row">
         <div class="name"> <%= users[i].name %> </div>
@@ -15,5 +15,5 @@
     <div class="info">price :  <%= users[i].traitements[0][0].price %> MAD</div>
     <div class="status"> <div class="dot"></div> <span>complet</span></div>
 </div>
-
+<% } %> 
 <% } %> 
